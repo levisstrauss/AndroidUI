@@ -16,13 +16,14 @@
     <string name="result">Result</string>
     <string name="to">To:</string>
     <string name="subject">Subject:</string>
+    <string name="action">Action</string>
 
 
     <string-array name="data_structures">
-        <item>2–3 Tree</item>
         <item>Binary Search Tree</item>
-        <item>Hash Table</item>
+        <item>2–3 Tree</item>
         <item>Linked List</item>
+        <item>Hash Table</item>
         <item>Min Heap</item>
     </string-array>
 

@@ -17,31 +17,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/emailAddress"
         android:layout_width="347dp"
         android:layout_height="49dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="52dp"
         android:autofillHints="email"
         android:ems="10"
         android:hint="@string/email_address"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <EditText
         android:id="@+id/emailSubject"
         android:layout_width="348dp"
         android:layout_height="48dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="100dp"
         android:autofillHints="name"
         android:ems="10"
         android:hint="@string/email_subject"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,10 +53,10 @@
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292" />
+        app:layout_constraintVertical_bias="0.259" />
 
     <TextView
         android:id="@+id/dataStructure"
@@ -68,7 +68,7 @@
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintVertical_bias="0.317" />
 
     <Spinner
         android:id="@+id/dataStructures_spinner"
@@ -77,10 +77,10 @@
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.621"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.429" />
+        app:layout_constraintVertical_bias="0.378" />
 
     <TextView
         android:id="@+id/operation"
@@ -89,9 +89,10 @@
         android:text="@string/operation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446" />
 
     <CheckBox
         android:id="@+id/getMin"
@@ -103,7 +104,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
+        app:layout_constraintVertical_bias="0.519" />
 
     <CheckBox
         android:id="@+id/insert"
@@ -116,7 +117,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
+        app:layout_constraintVertical_bias="0.519" />
 
     <CheckBox
         android:id="@+id/search"
@@ -129,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
+        app:layout_constraintVertical_bias="0.519" />
 
     <TextView
         android:id="@+id/case_option"
@@ -141,7 +142,8 @@
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626" />
+        app:layout_constraintVertical_bias="0.578" />
+
 
     <TextView
         android:id="@+id/textResult"
@@ -154,32 +156,7 @@
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.773" />
-
-    <TextView
-        android:id="@+id/textTo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/to"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.835" />
-
-    <TextView
-        android:id="@+id/textSubject"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/subject"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863" />
-
+        app:layout_constraintVertical_bias="0.733" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -191,37 +168,97 @@
         app:layout_constraintHorizontal_bias="0.691"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7">
+        app:layout_constraintVertical_bias="0.65">
 
         <RadioButton
             android:id="@+id/average_case"
             android:layout_width="133dp"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="@string/average_case"
-            android:checked="true"/>
+            android:checked="true"
+            android:text="@string/average_case" />
 
         <RadioButton
             android:id="@+id/worst_case"
             android:layout_width="137dp"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
             android:text="@string/worst_case" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="331dp"
+        android:layout_height="59dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.895" />
+
+    <TextView
+        android:id="@+id/sendTo"
+        android:layout_width="285dp"
+        android:layout_height="18dp"
+        android:width="255dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.774" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:contentDescription="@string/action"
+        android:onClick="buttonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
-        app:srcCompat="@drawable/ic_email_send"
-    />
+        app:layout_constraintVertical_bias="0.92"
+        app:srcCompat="@drawable/ic_email_send" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subject"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.803" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775" />
+
+    <TextView
+        android:id="@+id/textSubject"
+        android:layout_width="257dp"
+        android:layout_height="18dp"
+        android:width="255dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.802" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
