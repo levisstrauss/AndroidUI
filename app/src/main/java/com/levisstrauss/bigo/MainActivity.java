@@ -1,6 +1,7 @@
+/*
+   @author: Zakaria Coulibaly
+ */
 package com.levisstrauss.bigo;
-
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,30 +17,49 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    String[][][] complexity =
-            {
-               {
-                   {"O(log(n))", "O(log(n))", "O(log(n))"},
-                   {"ϴ(log(n))", "ϴ(log(n))", "ϴ(log(n))"}
+    // String of all the data structures runtime complexity
+    String[][][] complexity_of_dataStructures =
+            {{
+                   {
+                       "O(log(n))", "O(log(n))", "O(log(n))"
+                   },
+                   {
+                       "ϴ(log(n))", "ϴ(log(n))", "ϴ(log(n))"
+                   }
                },
                {
-                   {"O(n)", "O(n)", "O(n)"},
-                   {"ϴ(log(n))", "ϴ(log(n))", "ϴ(log(n))"}
+                   {
+                       "O(n)", "O(n)", "O(n)"
+                   },
+                   {
+                       "ϴ(log(n))", "ϴ(log(n))", "ϴ(log(n))"
+                   }
                },
                {
-                   {"O(n)", "O(n)", "O(n)"},
-                   {"ϴ(1)", "ϴ(1)", "ϴ(1)"}
+                   {
+                       "O(n)", "O(n)", "O(n)"
+                   },
+                   {
+                       "ϴ(1)", "ϴ(1)", "ϴ(1)"
+                   }
                },
                {
-                   {"O(n)", "O(1)", "O(n)"},
-                   {"ϴ(n)", "ϴ(1)", "ϴ(n)"}
+                   {
+                       "O(n)", "O(1)", "O(n)"
+                   },
+                   {
+                       "ϴ(n)", "ϴ(1)", "ϴ(n)"
+                   }
                },
                {
-                   {"O(1)", "O(log(n))", "O(n)"},
-                   {"ϴ(1)", "ϴ(log(n))", "ϴ(n)"}
+                   {
+                       "O(1)", "O(log(n))", "O(n)"
+                   },
+                   {
+                       "ϴ(1)", "ϴ(log(n))", "ϴ(n)"
+                   }
                }
             };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,9 +75,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner.setOnItemSelectedListener(this);
     }
 
-
+    // Function that will fire if the floating button is clicked
     public void buttonClick (View view) {
-        String message = "";
+        String content = "";
 
         // Get the email address
         EditText email = (EditText) findViewById(R.id.emailAddress);
@@ -69,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // Get the spinner value
         Spinner spinner = findViewById(R.id.dataStructures_spinner);
         int spinnerPosition = spinner.getSelectedItemPosition();
+
 
         // Get all the checkboxes
         CheckBox getMin = findViewById(R.id.getMin);
@@ -92,32 +113,37 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         int selectedCase = 0;
         if (worstCase.isChecked()){
-            message = "Worst Case";
+            content = "Worst Case";
         }
         if (averageCase.isChecked()){
-            message = "Average Case";
+            content = "Average Case";
             selectedCase = 1;
         }
-        message = message + " Time Complexity for " + spinner.getSelectedItem().toString() + ":\n";
+        content = content + " Time Complexity for " +
+                spinner.getSelectedItem().toString() + ":\n";
         if (getMin.isChecked()){
-            message = message + "    Get Minimum: " + complexity[spinnerPosition][selectedCase][0] + "\n";
+            content = content + "    Get Minimum: " +
+                    complexity_of_dataStructures[spinnerPosition][selectedCase][0] + "\n";
         }
         if (insert.isChecked()){
             if (spinnerPosition == 2) {
-                message = message + "    Insert (at the beginning): " + complexity[spinnerPosition][selectedCase][1] + "\n";
+                content = content + "    Insert (at the beginning): " +
+                        complexity_of_dataStructures[spinnerPosition][selectedCase][1] + "\n";
             }
             else{
-                message = message + "    Insert: " + complexity[spinnerPosition][selectedCase][1] + "\n";
+                content = content + "    Insert: " +
+                        complexity_of_dataStructures[spinnerPosition][selectedCase][1] + "\n";
             }
         }
         if(search.isChecked()){
-            message = message + "    Search: " + complexity[spinnerPosition][selectedCase][2] + "\n";
+            content = content + "    Search: " +
+                    complexity_of_dataStructures[spinnerPosition][selectedCase][2] + "\n";
         }
         // Set the result of the content field
-        resultContent.setText(message);
+        resultContent.setText(content);
     }
 
-    // The override methods
+    // Override methods
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
